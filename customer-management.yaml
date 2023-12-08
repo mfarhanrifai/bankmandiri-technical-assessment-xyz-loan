@@ -319,6 +319,10 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/Loan'
+            loanProfile:
+              type: array
+              items:
+                $ref: '#/components/schemas/LoanProfile'    
               
     CreateDocument:
       type: object
@@ -378,6 +382,24 @@ components:
               type: string
             paymentDate:
               type: string
+              
+    LoanProfile:
+      type: object
+      required:
+          - loanProfileId
+          - maxAmount
+          - maxTenor
+          - status
+      properties:
+            loanProfileId:
+              type: string
+            maxAmount:
+              type: string
+            maxTenor:
+              type: string
+            status:
+              type: string            
+              
     Error:
       type: object
       required:
